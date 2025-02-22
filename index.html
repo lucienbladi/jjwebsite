@@ -11,15 +11,21 @@
     <style>
         body {
             font-family: Kanit, sans-serif;
-            background: url('https://r2-bios.e-z.host/example-background.jpg') no-repeat center center fixed;
-            background-size: cover;
+            background-color: #424242;
             color: #4c4c4c;
+            margin: 0;
+            padding: 0;
         }
-        .main-box {
-            background-color: rgba(14, 14, 14, 0.8);
-            padding: 1rem;
-            border-radius: 2rem;
-            text-align: center;
+        ::selection {
+            background-color: #0e0e0e;
+            color: #252525;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
         }
         .profile-pic {
             border: 2px solid #252525;
@@ -27,22 +33,30 @@
             height: 120px;
             border-radius: 50%;
         }
-        .social-link {
+        .username {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .socials a {
             display: inline-block;
             margin-top: 10px;
             padding: 10px;
             border-radius: 50%;
             background: #080808;
             border: 2px solid #252525;
+            text-decoration: none;
+            color: #6a6a6a;
         }
     </style>
 </head>
 <body>
-    <div class="main-box">
+    <div class="container">
         <img class="profile-pic" src="https://r2-bios.e-z.host/example-image.jpg" alt="gun6">
-        <h1>gun6</h1>
+        <h1 class="username">gun6</h1>
         <p>@gun6</p>
-        <a href="https://t.me/b4bme" class="social-link">Telegram</a>
+        <div class="socials">
+            <a href="https://t.me/b4bme">Telegram</a>
+        </div>
     </div>
 </body>
 </html>
